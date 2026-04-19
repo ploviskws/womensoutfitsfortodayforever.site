@@ -191,6 +191,23 @@
       justify-content: flex-end;
       padding: 2rem;
     }
+    .hero-card-main img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .hero-card-main::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(43,26,20,0.7) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .hero-card-main .cat-bg,
+    .hero-card-main .cat-info { position: relative; z-index: 2; }
 
     .hero-card-float {
       width: 160px;
@@ -338,6 +355,9 @@
     }
 
     .cat-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+    .cat-bg img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+
+    .outfit-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 
     .cat-1 { background: linear-gradient(135deg, #fde0d0 0%, #f0a888 100%); }
     .cat-2 { background: linear-gradient(135deg, #d4e8f0 0%, #90c0d8 100%); }
@@ -645,8 +665,9 @@
 
   <div class="hero-visual">
     <div class="hero-card hero-card-main cat-1">
-      <div class="cat-bg" style="opacity:0.3">👗</div>
-      <div class="cat-info">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&h=840&fit=crop&crop=top" alt="Everyday Chic outfit" onerror="this.style.display='none'" />
+      <div class="cat-bg" style="opacity:0.15">👗</div>
+      <div class="cat-info" style="position:relative;z-index:3">
         <div class="card-label">Everyday Chic</div>
         <div class="card-sub">Effortless. Stylish. You.</div>
       </div>
@@ -691,42 +712,60 @@
 
   <div class="categories-grid">
     <div class="cat-card cat-1">
-      <div class="cat-bg">👗</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=540&fit=crop&crop=top" alt="Casual Chic" onerror="this.style.display='none'" />
+        👗
+      </div>
       <div class="cat-info">
         <div class="cat-name">Casual Chic</div>
         <div class="cat-count">80+ outfit ideas</div>
       </div>
     </div>
     <div class="cat-card cat-2">
-      <div class="cat-bg">🧊</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=540&fit=crop&crop=top" alt="Cool Streetwear" onerror="this.style.display='none'" />
+        🧊
+      </div>
       <div class="cat-info">
         <div class="cat-name">Cool Streetwear</div>
         <div class="cat-count">65+ outfit ideas</div>
       </div>
     </div>
     <div class="cat-card cat-3">
-      <div class="cat-bg">🌿</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=400&h=540&fit=crop&crop=top" alt="Boho Earthy" onerror="this.style.display='none'" />
+        🌿
+      </div>
       <div class="cat-info">
         <div class="cat-name">Boho & Earthy</div>
         <div class="cat-count">55+ outfit ideas</div>
       </div>
     </div>
     <div class="cat-card cat-4">
-      <div class="cat-bg">💃</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=400&h=540&fit=crop&crop=top" alt="Party Evening" onerror="this.style.display='none'" />
+        💃
+      </div>
       <div class="cat-info">
         <div class="cat-name">Party & Evening</div>
         <div class="cat-count">70+ outfit ideas</div>
       </div>
     </div>
     <div class="cat-card cat-5">
-      <div class="cat-bg">☀️</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=540&fit=crop&crop=top" alt="Vacation Looks" onerror="this.style.display='none'" />
+        ☀️
+      </div>
       <div class="cat-info">
         <div class="cat-name">Vacation Looks</div>
         <div class="cat-count">45+ outfit ideas</div>
       </div>
     </div>
     <div class="cat-card cat-6">
-      <div class="cat-bg">🎓</div>
+      <div class="cat-bg">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=540&fit=crop&crop=top" alt="College Ready" onerror="this.style.display='none'" />
+        🎓
+      </div>
       <div class="cat-info">
         <div class="cat-name">College Ready</div>
         <div class="cat-count">60+ outfit ideas</div>
@@ -743,7 +782,10 @@
 
   <div class="outfits-grid">
     <div class="outfit-card">
-      <div class="outfit-thumb cat-1">👗<span class="outfit-badge">Trending</span></div>
+      <div class="outfit-thumb cat-1">
+        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=300&fit=crop&crop=top" alt="Flowy Midi outfit" />
+        <span class="outfit-badge">Trending</span>
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Flowy Midi + White Sneakers</div>
         <div class="outfit-desc">A floral midi skirt paired with a fitted white tee and classic white sneakers — the ultimate effortless Sunday look.</div>
@@ -754,7 +796,10 @@
     </div>
 
     <div class="outfit-card">
-      <div class="outfit-thumb cat-2">🧥<span class="outfit-badge">New</span></div>
+      <div class="outfit-thumb cat-2">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=300&fit=crop&crop=top" alt="Blazer Biker Shorts outfit" />
+        <span class="outfit-badge">New</span>
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Oversized Blazer + Biker Shorts</div>
         <div class="outfit-desc">Channel boss energy with a structured blazer over biker shorts. Add chunky loafers for the perfect power-casual combo.</div>
@@ -765,7 +810,10 @@
     </div>
 
     <div class="outfit-card">
-      <div class="outfit-thumb cat-4">✨<span class="outfit-badge">Hot Pick</span></div>
+      <div class="outfit-thumb cat-4">
+        <img src="https://images.unsplash.com/photo-1566206091558-7f218b696731?w=400&h=300&fit=crop&crop=top" alt="Satin Slip Dress outfit" />
+        <span class="outfit-badge">Hot Pick</span>
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Satin Slip Dress + Blazer</div>
         <div class="outfit-desc">Layer a satin slip dress with an oversized blazer and strappy heels — date night and dinner ready in one swoop.</div>
@@ -776,7 +824,9 @@
     </div>
 
     <div class="outfit-card">
-      <div class="outfit-thumb cat-3">🌸</div>
+      <div class="outfit-thumb cat-3">
+        <img src="https://images.unsplash.com/photo-1518609878373-06d740f60d8b?w=400&h=300&fit=crop&crop=top" alt="Linen Co-ord Set" />
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Linen Co-ord Set</div>
         <div class="outfit-desc">Matching linen sets are having a major moment. Pair with slides and gold hoops for a put-together look with zero effort.</div>
@@ -787,7 +837,10 @@
     </div>
 
     <div class="outfit-card">
-      <div class="outfit-thumb cat-6">📚<span class="outfit-badge">College</span></div>
+      <div class="outfit-thumb cat-6">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=300&fit=crop&crop=top" alt="Mom Jeans Crop Hoodie" />
+        <span class="outfit-badge">College</span>
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Mom Jeans + Crop Hoodie</div>
         <div class="outfit-desc">High-waisted mom jeans with a cropped hoodie and platform boots — the campus look that never goes out of style.</div>
@@ -798,7 +851,9 @@
     </div>
 
     <div class="outfit-card">
-      <div class="outfit-thumb cat-5">🌊</div>
+      <div class="outfit-thumb cat-5">
+        <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&h=300&fit=crop&crop=top" alt="Sundress Straw Bag" />
+      </div>
       <div class="outfit-body">
         <div class="outfit-title">Sundress + Straw Bag</div>
         <div class="outfit-desc">A breezy sundress with a straw tote and flat sandals — vacation mode, always. Perfect from beach to brunch.</div>
