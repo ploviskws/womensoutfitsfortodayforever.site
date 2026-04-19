@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StyleHer – Girls Outfit Ideas & Styling Guide</title>
+  <meta name="description" content="Discover the latest girls outfit ideas, styling tips, and fashion trends. From casual chic to formal elegance — find your perfect look." />
+  <meta name="keywords" content="girls outfit ideas, girls fashion, styling tips, teen fashion, women outfit ideas, casual outfits, party outfits" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blush: #f5e6e0;
+      --rose: #c8806a;
+      --deep: #2b1a14;
+      --cream: #fdf8f5;
+      --clay: #d4a08a;
+      --text: #3a2218;
+      --muted: #9a7060;
+      --white: #ffffff;
+      --accent: #e05a3a;
+      --card-bg: #fff9f6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253,248,245,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #e8d5cc;
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--deep);
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+
+    nav { display: flex; gap: 2rem; align-items: center; }
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    .nav-cta {
+      background: var(--deep);
+      color: var(--white) !important;
+      padding: 0.45rem 1.2rem;
+      border-radius: 100px;
+      font-size: 0.82rem !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--accent) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 88vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+      padding: 0 5vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 60% 70% at 80% 50%, #f5d5c840 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-text { z-index: 2; animation: fadeUp 0.9s ease both; }
+
+    .hero-tag {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--rose);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--deep);
+      margin-bottom: 1.4rem;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 430px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--deep);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--accent); transform: translateY(-2px); }
+
+    .btn-outline {
+      border: 1.5px solid var(--clay);
+      color: var(--deep);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* Hero visual */
+    .hero-visual {
+      position: relative;
+      height: 500px;
+      animation: fadeUp 1.1s 0.2s ease both;
+    }
+
+    .hero-card {
+      position: absolute;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(43,26,20,0.15);
+    }
+
+    .hero-card-main {
+      width: 300px;
+      height: 420px;
+      top: 40px;
+      left: 40px;
+      background: linear-gradient(145deg, #f0c8b0 0%, #e8a080 50%, #c87060 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2rem;
+    }
+
+    .hero-card-float {
+      width: 160px;
+      height: 180px;
+      bottom: 30px;
+      right: 20px;
+      background: linear-gradient(145deg, #fde8d8 0%, #f5c4a4 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1.2rem;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .hero-card-sm {
+      width: 130px;
+      height: 130px;
+      top: 20px;
+      right: 60px;
+      background: var(--deep);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      animation: float 5s 1s ease-in-out infinite;
+    }
+
+    .outfit-icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .card-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.2;
+    }
+    .card-label-dark { color: var(--deep); }
+    .card-sub {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 0.3rem;
+    }
+    .card-sub-dark { color: var(--muted); }
+
+    /* ── STATS BAND ── */
+    .stats {
+      background: var(--deep);
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      padding: 0;
+    }
+    .stat {
+      flex: 1;
+      max-width: 260px;
+      padding: 2rem 2.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--clay);
+    }
+    .stat-desc {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.3rem;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 5rem 5vw; }
+
+    .section-tag {
+      display: inline-block;
+      background: var(--blush);
+      color: var(--rose);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.35rem 1rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 900;
+      color: var(--deep);
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+    .section-title em { font-style: italic; color: var(--accent); }
+
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.75;
+      max-width: 520px;
+      margin-bottom: 3rem;
+    }
+
+    /* ── CATEGORY GRID ── */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .cat-card {
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      aspect-ratio: 3/4;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      animation: fadeUp 0.7s ease both;
+    }
+    .cat-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(43,26,20,0.18); }
+
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(43,26,20,0.75) 0%, transparent 55%);
+      z-index: 1;
+    }
+
+    .cat-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 5rem; }
+
+    .cat-1 { background: linear-gradient(135deg, #fde0d0 0%, #f0a888 100%); }
+    .cat-2 { background: linear-gradient(135deg, #d4e8f0 0%, #90c0d8 100%); }
+    .cat-3 { background: linear-gradient(135deg, #e8f0d4 0%, #a8c870 100%); }
+    .cat-4 { background: linear-gradient(135deg, #f0d4e8 0%, #d880b0 100%); }
+    .cat-5 { background: linear-gradient(135deg, #f8ecd4 0%, #e8b870 100%); }
+    .cat-6 { background: linear-gradient(135deg, #d4d4f0 0%, #8888d8 100%); }
+
+    .cat-info { position: relative; z-index: 2; }
+    .cat-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .cat-count {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.2rem;
+    }
+
+    /* ── OUTFIT IDEAS GRID ── */
+    .outfits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .outfit-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid #edd8cc;
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 0.7s ease both;
+    }
+    .outfit-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(43,26,20,0.12); }
+
+    .outfit-thumb {
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .outfit-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+    }
+
+    .outfit-body { padding: 1.4rem; }
+    .outfit-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 0.5rem;
+    }
+    .outfit-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+    .outfit-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag {
+      background: var(--blush);
+      color: var(--rose);
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 0.25rem 0.7rem;
+      border-radius: 100px;
+    }
+
+    /* ── TIPS SECTION ── */
+    .tips-bg { background: var(--blush); border-radius: 32px; padding: 4rem; }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .tip-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem;
+      border: 1px solid #edd8cc;
+      transition: transform 0.25s;
+    }
+    .tip-card:hover { transform: translateY(-4px); }
+
+    .tip-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .tip-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep);
+      margin-bottom: 0.5rem;
+    }
+    .tip-text {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── SEASONAL SECTION ── */
+    .seasonal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .season-card {
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.25s;
+      cursor: pointer;
+    }
+    .season-card:hover { transform: translateY(-5px); }
+
+    .s-spring { background: linear-gradient(145deg, #fde8f8, #f8c4e8); }
+    .s-summer { background: linear-gradient(145deg, #fff3d0, #ffe090); }
+    .s-autumn { background: linear-gradient(145deg, #ffe4cc, #f8b880); }
+    .s-winter { background: linear-gradient(145deg, #d8eeff, #a8ccf0); }
+
+    .season-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    .season-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--deep);
+    }
+    .season-items {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.6rem;
+      line-height: 1.7;
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--deep);
+      border-radius: 32px;
+      padding: 4rem;
+      text-align: center;
+      margin: 0 5vw 5rem;
+    }
+
+    .newsletter h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 0.8rem;
+    }
+    .newsletter h2 em { font-style: italic; color: var(--clay); }
+    .newsletter p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 2rem;
+    }
+
+    .nl-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 440px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nl-input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.85rem 1.3rem;
+      border-radius: 100px;
+      border: none;
+      font-size: 0.9rem;
+      font-family: 'DM Sans', sans-serif;
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      outline: none;
+    }
+    .nl-input::placeholder { color: rgba(255,255,255,0.4); }
+    .nl-input:focus { background: rgba(255,255,255,0.15); }
+
+    .nl-btn {
+      background: var(--accent);
+      color: var(--white);
+      padding: 0.85rem 1.8rem;
+      border-radius: 100px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nl-btn:hover { background: #c84420; transform: scale(1.03); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--deep);
+      color: rgba(255,255,255,0.5);
+      padding: 3rem 5vw 2rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    .footer-logo span { color: var(--clay); }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.82rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--clay); }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    /* animation delays for grids */
+    .cat-card:nth-child(1) { animation-delay: 0.05s; }
+    .cat-card:nth-child(2) { animation-delay: 0.12s; }
+    .cat-card:nth-child(3) { animation-delay: 0.19s; }
+    .cat-card:nth-child(4) { animation-delay: 0.26s; }
+    .cat-card:nth-child(5) { animation-delay: 0.33s; }
+    .cat-card:nth-child(6) { animation-delay: 0.40s; }
+    .outfit-card:nth-child(1) { animation-delay: 0.05s; }
+    .outfit-card:nth-child(2) { animation-delay: 0.13s; }
+    .outfit-card:nth-child(3) { animation-delay: 0.21s; }
+    .outfit-card:nth-child(4) { animation-delay: 0.29s; }
+    .outfit-card:nth-child(5) { animation-delay: 0.37s; }
+    .outfit-card:nth-child(6) { animation-delay: 0.45s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; padding-top: 3rem; padding-bottom: 3rem; }
+      .hero-visual { display: none; }
+      nav { display: none; }
+      .seasonal-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats { flex-wrap: wrap; }
+      .stat { min-width: 140px; }
+    }
+    @media (max-width: 600px) {
+      .tips-bg, .newsletter { padding: 2.5rem 1.5rem; }
+      .seasonal-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      section { padding: 3.5rem 5vw; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="logo">Style<span>Her</span></div>
+  <nav>
+    <a href="#categories">Categories</a>
+    <a href="#outfits">Outfits</a>
+    <a href="#tips">Tips</a>
+    <a href="#seasonal">Seasonal</a>
+    <a href="#newsletter" class="nav-cta">Get Inspired</a>
+  </nav>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-tag">✨ New Season Looks</span>
+    <h1>Dress Like<br/>You're <em>In Love</em><br/>With Yourself</h1>
+    <p>Curated outfit ideas and styling guides for every girl — from everyday casuals to show-stopping looks. Find your signature style today.</p>
+    <div class="hero-btns">
+      <a href="#outfits" class="btn-primary">Explore Outfits</a>
+      <a href="#tips" class="btn-outline">Styling Tips</a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-card hero-card-main cat-1">
+      <div class="cat-bg" style="opacity:0.3">👗</div>
+      <div class="cat-info">
+        <div class="card-label">Everyday Chic</div>
+        <div class="card-sub">Effortless. Stylish. You.</div>
+      </div>
+    </div>
+    <div class="hero-card hero-card-float">
+      <span class="outfit-icon">💄</span>
+      <div class="card-label card-label-dark" style="font-size:0.9rem">Beauty + Style</div>
+      <div class="card-sub card-sub-dark">Complete the look</div>
+    </div>
+    <div class="hero-card hero-card-sm">
+      <span style="font-size:1.8rem">🔥</span>
+      <div class="card-label" style="font-size:0.8rem">Trending Now</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">500+</div>
+    <div class="stat-desc">Outfit Ideas</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">20+</div>
+    <div class="stat-desc">Style Categories</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">All Ages</div>
+    <div class="stat-desc">Teen to Adult</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">4 Seasons</div>
+    <div class="stat-desc">Year Round Fashion</div>
+  </div>
+</div>
+
+<!-- ── CATEGORIES ── -->
+<section id="categories">
+  <div class="section-tag">Browse by Style</div>
+  <h2 class="section-title">Find Your <em>Vibe</em></h2>
+  <p class="section-desc">Every girl has her own fashion personality. Explore categories that match yours — or try something new.</p>
+
+  <div class="categories-grid">
+    <div class="cat-card cat-1">
+      <div class="cat-bg">👗</div>
+      <div class="cat-info">
+        <div class="cat-name">Casual Chic</div>
+        <div class="cat-count">80+ outfit ideas</div>
+      </div>
+    </div>
+    <div class="cat-card cat-2">
+      <div class="cat-bg">🧊</div>
+      <div class="cat-info">
+        <div class="cat-name">Cool Streetwear</div>
+        <div class="cat-count">65+ outfit ideas</div>
+      </div>
+    </div>
+    <div class="cat-card cat-3">
+      <div class="cat-bg">🌿</div>
+      <div class="cat-info">
+        <div class="cat-name">Boho & Earthy</div>
+        <div class="cat-count">55+ outfit ideas</div>
+      </div>
+    </div>
+    <div class="cat-card cat-4">
+      <div class="cat-bg">💃</div>
+      <div class="cat-info">
+        <div class="cat-name">Party & Evening</div>
+        <div class="cat-count">70+ outfit ideas</div>
+      </div>
+    </div>
+    <div class="cat-card cat-5">
+      <div class="cat-bg">☀️</div>
+      <div class="cat-info">
+        <div class="cat-name">Vacation Looks</div>
+        <div class="cat-count">45+ outfit ideas</div>
+      </div>
+    </div>
+    <div class="cat-card cat-6">
+      <div class="cat-bg">🎓</div>
+      <div class="cat-info">
+        <div class="cat-name">College Ready</div>
+        <div class="cat-count">60+ outfit ideas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OUTFIT IDEAS ── -->
+<section id="outfits" style="background: var(--blush);">
+  <div class="section-tag">Editor's Picks</div>
+  <h2 class="section-title">Trending <em>Right Now</em></h2>
+  <p class="section-desc">Hand-picked outfit combinations that are making waves this season. Get inspired and make them your own.</p>
+
+  <div class="outfits-grid">
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-1">👗<span class="outfit-badge">Trending</span></div>
+      <div class="outfit-body">
+        <div class="outfit-title">Flowy Midi + White Sneakers</div>
+        <div class="outfit-desc">A floral midi skirt paired with a fitted white tee and classic white sneakers — the ultimate effortless Sunday look.</div>
+        <div class="outfit-tags">
+          <span class="tag">Casual</span><span class="tag">Spring</span><span class="tag">Comfy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-2">🧥<span class="outfit-badge">New</span></div>
+      <div class="outfit-body">
+        <div class="outfit-title">Oversized Blazer + Biker Shorts</div>
+        <div class="outfit-desc">Channel boss energy with a structured blazer over biker shorts. Add chunky loafers for the perfect power-casual combo.</div>
+        <div class="outfit-tags">
+          <span class="tag">Streetwear</span><span class="tag">Office</span><span class="tag">Bold</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-4">✨<span class="outfit-badge">Hot Pick</span></div>
+      <div class="outfit-body">
+        <div class="outfit-title">Satin Slip Dress + Blazer</div>
+        <div class="outfit-desc">Layer a satin slip dress with an oversized blazer and strappy heels — date night and dinner ready in one swoop.</div>
+        <div class="outfit-tags">
+          <span class="tag">Evening</span><span class="tag">Date Night</span><span class="tag">Glam</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-3">🌸</div>
+      <div class="outfit-body">
+        <div class="outfit-title">Linen Co-ord Set</div>
+        <div class="outfit-desc">Matching linen sets are having a major moment. Pair with slides and gold hoops for a put-together look with zero effort.</div>
+        <div class="outfit-tags">
+          <span class="tag">Boho</span><span class="tag">Summer</span><span class="tag">Minimal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-6">📚<span class="outfit-badge">College</span></div>
+      <div class="outfit-body">
+        <div class="outfit-title">Mom Jeans + Crop Hoodie</div>
+        <div class="outfit-desc">High-waisted mom jeans with a cropped hoodie and platform boots — the campus look that never goes out of style.</div>
+        <div class="outfit-tags">
+          <span class="tag">College</span><span class="tag">Casual</span><span class="tag">Cozy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="outfit-card">
+      <div class="outfit-thumb cat-5">🌊</div>
+      <div class="outfit-body">
+        <div class="outfit-title">Sundress + Straw Bag</div>
+        <div class="outfit-desc">A breezy sundress with a straw tote and flat sandals — vacation mode, always. Perfect from beach to brunch.</div>
+        <div class="outfit-tags">
+          <span class="tag">Vacation</span><span class="tag">Beach</span><span class="tag">Breezy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STYLING TIPS ── -->
+<section id="tips">
+  <div class="tips-bg">
+    <div class="section-tag">Pro Styling Tips</div>
+    <h2 class="section-title">Style Secrets That <em>Actually Work</em></h2>
+    <p class="section-desc">Simple, actionable tips from top stylists to elevate every outfit you wear.</p>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-icon">👟</span>
+        <div class="tip-title">Shoes Make the Outfit</div>
+        <div class="tip-text">The right footwear can transform a basic look into a statement. Swap sneakers for heels to instantly elevate any casual outfit.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">💍</span>
+        <div class="tip-title">Accessorize Intentionally</div>
+        <div class="tip-text">Choose 1–2 statement pieces per outfit. Layered necklaces, hoop earrings, or a bold belt can be the finishing touch.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🎨</span>
+        <div class="tip-title">Master Color Blocking</div>
+        <div class="tip-text">Pair bold solid colors together confidently. Coral + cobalt, butter yellow + forest green — contrast is chic.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">📐</span>
+        <div class="tip-title">Proportion is Everything</div>
+        <div class="tip-text">Loose top + fitted bottom, or fitted top + wide-leg pants. Balance your silhouette for a polished, intentional look.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🧥</span>
+        <div class="tip-title">Layer Like a Pro</div>
+        <div class="tip-text">A denim jacket, blazer, or cardigan adds depth to any outfit and keeps you versatile across temperatures.</div>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🪞</span>
+        <div class="tip-title">Dress for Your Confidence</div>
+        <div class="tip-text">The best outfit is one you feel great in. Wear what makes you feel powerful, playful, or however you want to feel today.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SEASONAL ── -->
+<section id="seasonal">
+  <div class="section-tag">By Season</div>
+  <h2 class="section-title">Year-Round <em>Style Guide</em></h2>
+  <p class="section-desc">Fashion changes with the seasons — here's how to dress your best in every one.</p>
+
+  <div class="seasonal-grid">
+    <div class="season-card s-spring">
+      <span class="season-icon">🌸</span>
+      <div class="season-name">Spring</div>
+      <div class="season-items">Floral prints · Pastel tones<br/>Light layers · Sneakers</div>
+    </div>
+    <div class="season-card s-summer">
+      <span class="season-icon">☀️</span>
+      <div class="season-name">Summer</div>
+      <div class="season-items">Sundresses · Co-ords<br/>Linen sets · Sandals</div>
+    </div>
+    <div class="season-card s-autumn">
+      <span class="season-icon">🍂</span>
+      <div class="season-name">Autumn</div>
+      <div class="season-items">Earthy tones · Knit sweaters<br/>Boots · Trench coats</div>
+    </div>
+    <div class="season-card s-winter">
+      <span class="season-icon">❄️</span>
+      <div class="season-name">Winter</div>
+      <div class="season-items">Puffer jackets · Turtlenecks<br/>Cozy layers · Knee boots</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<div class="newsletter" id="newsletter">
+  <h2>Get <em>Weekly</em> Style Inspo</h2>
+  <p>New outfit ideas, trend alerts, and styling tips — delivered to your inbox every week. No spam, ever.</p>
+  <div class="nl-form">
+    <input class="nl-input" type="email" placeholder="Enter your email address" />
+    <button class="nl-btn" onclick="this.textContent='✓ Subscribed!'">Subscribe Free</button>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">Style<span>Her</span></div>
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Contact</a>
+    <a href="#">Sitemap</a>
+  </div>
+  <div class="footer-copy">© 2026 StyleHer. All rights reserved. All images and content are used for editorial fashion inspiration purposes only.</div>
+</footer>
+
+</body>
+</html>
